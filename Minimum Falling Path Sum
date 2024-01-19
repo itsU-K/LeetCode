@@ -1,0 +1,45 @@
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+    int i,j;
+    //int [][] matrix = {{2,1,3},{6,5,4},{7,8,9}};
+    int [][] matrix = {{-19,57},{-40,-5}};
+    // [-19,57],[-40,-5]
+    
+        int jstart = 0;
+        int jend = matrix.length-1;
+        //System.out.println(matrix.length);
+        int sum=0;
+        
+        int length = matrix.length-1;
+        
+        for(i=0;i<=length;i++)
+        {
+        	int newj=0;
+        	int min =matrix[i][jstart];
+            	for(j=jstart;j<=jend;j++)
+            	{
+            		System.out.println("before condition j -------"+j);
+                	if(min>matrix[i][j])
+                    {
+                    	min=matrix[i][j];
+                    	System.out.println("min ="+min);    
+                        newj=j;
+                	}
+                    //System.out.println("newj = "+newj);
+        			//System.out.println("after condition i"+i + "j----------" + j);
+       			}
+                System.out.println("newj = "+newj);
+                sum=sum+min;
+                
+                jstart=newj;
+            	jend=newj;
+                
+                System.out.println(" sum = " + sum);
+            	//System.out.println("jstart "+jstart);
+            	//System.out.println("jend "+jend);
+          	//System.out.println("i before loop--------------------------"+i);
+        }
+        //System.out.println(sum);
+  }
+}
